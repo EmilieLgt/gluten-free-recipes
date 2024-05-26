@@ -1,0 +1,59 @@
+/* Header */
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-color: var(--first-color);
+}
+.logo-header {
+  height: 10vh;
+}
+
+.logo-title-header {
+  display: flex;
+  align-items: center;
+  margin-top: 2em;
+  gap: 1em;
+}
+
+/* Research */
+
+.research-section {
+  background-color: var(--dark-color);
+  border: 2px 0px 0px 0px  solid black;
+  text-align: center;
+  color:var(--background-color);
+  margin-bottom:2em;
+  padding:1em
+}
+.research-button {
+  background-color: var(--first-color);
+  color: #ffffff;
+  box-shadow: 2px 3px 3px var(--dark-color);
+}
+
+.filters-section{
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.choices-list-research {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  flex-wrap: wrap;
+
+}
+
+#choices-dish{
+  height:150px;
+
+}
+
+#choices-dish label {  padding-left: 2em;}
