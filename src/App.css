@@ -9,7 +9,7 @@
   background-color: var(--first-color);
 }
 .logo-header {
-  height: 10vh;
+  height: 7vh;
 }
 
 .logo-title-header {
@@ -22,10 +22,10 @@
 /* Research */
 
 .research-section {
-  background-color: var(--dark-color);
+  background-color: rgb(242, 242, 242);
   border: 2px 0px 0px 0px  solid black;
   text-align: center;
-  color:var(--background-color);
+  color: rgb(89, 71, 31);
   margin-bottom:2em;
   padding:1em
 }

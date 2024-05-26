@@ -182,7 +182,7 @@ function App() {
             <label>
               <input
                 type="checkbox"
-                value="biscuits"
+                value="Biscuits%20and%20cookies"
                 onChange={(e) => {
                   if (e.target.checked) {
                     setSelectedDishes([...selectedDishes, e.target.value]);
@@ -263,7 +263,7 @@ function App() {
             <label>
               <input
                 type="checkbox"
-                value="main%course"
+                value="main%20course"
                 onChange={(e) => {
                   if (e.target.checked) {
                     setSelectedDishes([...selectedDishes, e.target.value]);
@@ -295,6 +295,22 @@ function App() {
             <label>
               <input
                 type="checkbox"
+                value="Preps"
+                onChange={(e) => {
+                  if (e.target.checked) {
+                    setSelectedDishes([...selectedDishes, e.target.value]);
+                  } else {
+                    setSelectedDishes(
+                      selectedDishes.filter((diet) => diet !== e.target.value)
+                    );
+                  }
+                }}
+              />
+              Preps
+            </label>
+            <label>
+              <input
+                type="checkbox"
                 value="sandwiches"
                 onChange={(e) => {
                   if (e.target.checked) {
@@ -308,22 +324,7 @@ function App() {
               />
               Sandwiches
             </label>
-            <label>
-              <input
-                type="checkbox"
-                value="side%dish"
-                onChange={(e) => {
-                  if (e.target.checked) {
-                    setSelectedDishes([...selectedDishes, e.target.value]);
-                  } else {
-                    setSelectedDishes(
-                      selectedDishes.filter((diet) => diet !== e.target.value)
-                    );
-                  }
-                }}
-              />
-              Side dish
-            </label>
+      
             <label>
               <input
                 type="checkbox"
