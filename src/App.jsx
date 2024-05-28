@@ -1,5 +1,5 @@
 /* eslint-disable react/jsx-key */
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Title from "./components/Title";
 import Recipe from "./components/Recipe";
 import "./App.css";
@@ -11,7 +11,7 @@ function App() {
   // fetching api data for all gluten recipes
   const getRecipe = async () => {
     let url =
-      "https://api.edamam.com/api/recipes/v2?type=public&app_id=6f68faa9&app_key=4b488ecf195a74775ba2963c41b8718d&health=gluten-free&random=true&q=eggs";
+      "https://api.edamam.com/api/recipes/v2?type=public&app_id=6f68faa9&app_key=4b488ecf195a74775ba2963c41b8718d&health=gluten-free&random=true";
 
     // adding condition for selected meal, change the API url by adding the meal(s) selected, joined by "&mealType="
     if (selectedMeals.length > 0) {
@@ -56,20 +56,19 @@ function App() {
   };
 
   const handleAddIngredient = () => {
-      setSelectedIngredients([...selectedIngredients, inputValue]); // add the value of input to the list
+    if (inputValue.trim() !== "") {
+      setSelectedIngredients(prevIngredients => [...prevIngredients, inputValue]);// add the value of input to the list
       setInputValue(""); // set input to orginal state 
-      console.log(`ingredients après add function : ${selectedIngredients}`)
-    }
-  ;
+      console.log(`ingredients après add : ${selectedIngredients}`)
+    }else {console.log("Ajoutez des ingrédients")
+      
+    }}
+  
 
   const handleRemoveIngredient = () => {
     setSelectedIngredients([]);
-    console.log(`ingredients après clear function  : ${selectedIngredients}`)
+    console.log(`ingredients après clear  : ${selectedIngredients}`)
   };
-
-  useEffect(() => {
-    console.log("Ingredients après modification :", selectedIngredients);
-  }, [selectedIngredients]);
   return (
     <>
       <Title />
@@ -160,6 +159,78 @@ function App() {
             <div className="diet-section-research">
                <h3 >Diet</h3>
              <div className="choices-list-research">
+             <label>
+                  <input
+                    type="checkbox"
+                    value="dairy-free"
+                    onChange={(e) => {
+                      if (e.target.checked) {
+                        setSelectedDiets([...selectedDiets, e.target.value]);
+                      } else {
+                        setSelectedDiets(
+                          selectedDiets.filter(
+                            (diet) => diet !== e.target.value
+                          )
+                        );
+                      }
+                    }}
+                  />
+                  Dairy-free
+                </label>
+                <label>
+                  <input
+                    type="checkbox"
+                    value="peanut-free"
+                    onChange={(e) => {
+                      if (e.target.checked) {
+                        setSelectedDiets([...selectedDiets, e.target.value]);
+                      } else {
+                        setSelectedDiets(
+                          selectedDiets.filter(
+                            (diet) => diet !== e.target.value
+                          )
+                        );
+                      }
+                    }}
+                  />
+                  Peanut-free
+                </label>
+                <label>
+                  <input
+                    type="checkbox"
+                    value="pork-free"
+                    onChange={(e) => {
+                      if (e.target.checked) {
+                        setSelectedDiets([...selectedDiets, e.target.value]);
+                      } else {
+                        setSelectedDiets(
+                          selectedDiets.filter(
+                            (diet) => diet !== e.target.value
+                          )
+                        );
+                      }
+                    }}
+                  />
+                  Pork-free
+                </label>
+                <label>
+                  <input
+                    type="checkbox"
+                    value="soy-free"
+                    onChange={(e) => {
+                      if (e.target.checked) {
+                        setSelectedDiets([...selectedDiets, e.target.value]);
+                      } else {
+                        setSelectedDiets(
+                          selectedDiets.filter(
+                            (diet) => diet !== e.target.value
+                          )
+                        );
+                      }
+                    }}
+                  />
+                  Soy-free
+                </label>
                 <label>
                   <input
                     type="checkbox"
@@ -470,4 +541,4 @@ function App() {
   );
 }
 
-export default App;
+export default App 
