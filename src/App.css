@@ -50,11 +50,8 @@
   justify-content: center;
   align-items: start;
   flex-wrap: wrap;
-
   padding:2em;
   border-top:2px  black solid;
-
-
 }
 
 #choices-dish{
@@ -64,3 +61,55 @@
 }
 
 #choices-dish label {  padding-left: 2em;}
+
+
+
+.input-research{
+  padding:0.5em;
+  width:50%;
+  background-color: rgb(255, 255, 255);
+  border-radius:1em;
+}
+
+.clear-button {
+  background-color: var(--secondary-color);
+  color:white;
+  margin-left:1em;
+  box-shadow: 2px 2px 3px black;
+}
+.add-button {
+  background-color: var(--first-color);
+  color:white;
+  margin-left:1em;
+  box-shadow: 2px 2px 3px black;
+}
+
+
+.list-ingredients-filter {
+list-style:none;
+display:flex ; 
+flex-direction: row;
+gap :1em;
+flex-wrap: wrap;
+max-width: 25vw;
+margin-top:0;
+margin-bottom:1em
+}
+
+.list-ingredients-filter li{
+  background-color: var(--third-color);
+  color:white;
+  padding:0.4em;
+  text-transform: uppercase;
+  font-size : 0.8em
+}
+
+.ingredients-choice {
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding:1.5em;
+  border-top:2px  black solid;
+}
