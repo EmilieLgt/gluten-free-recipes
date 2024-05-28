@@ -7,7 +7,7 @@ function Recipe ({recipe}) {
 
 
 return (<div className='one-recipe'>
- <a href={recipe.url} target="blank"> <div className="img-hover-recipe"><img className="hover-text-svg" src="../../public/get-recipe.svg"/><img className="hover-img-svg" src="../../public/external-link-svgrepo-com.svg"/></div> </a> 
+ <a href={recipe.url} target="blank"> <div className="img-hover-recipe"><img className="hover-text-svg" src="../.../../get-recipe.svg"/><img className="hover-img-svg" src="../../../external-link-svgrepo-com.svg"/></div> </a> 
 
     <img  className='img-recipe' src= {recipe.images.REGULAR.url}/>  
     
