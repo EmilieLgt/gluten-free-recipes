@@ -1,4 +1,5 @@
-import { useState, useEffect } from "react";
+/* eslint-disable react/jsx-key */
+import { useState } from "react";
 import Title from "./components/Title";
 import Recipe from "./components/Recipe";
 import "./App.css";
@@ -39,15 +40,19 @@ function App() {
 
   const [selectedDishes, setSelectedDishes] = useState([]);
 
+
   // using state to put a conditon on the display of message error
 
   const [choicesMade, setChoicesMade] = useState(false);
 
+  
+
+  
   return (
     <>
       <Title />
       <section className="research-section">
-        <h2>Choose your meal and diet</h2>
+        <h2>What are you looking for ?</h2>
         <div className="filters-section">
         <div className="meal-diet-section">
           <div className="meal-section-research">
@@ -374,12 +379,13 @@ function App() {
               Sweets
             </label>
             </div>
+         
           </div>
-
+         
         
         </div>
         <button className="research-button" onClick={getRecipe}>
-            New Recipes !
+            Search Recipes
           </button>
       </section>
       <section className="recipes-section">

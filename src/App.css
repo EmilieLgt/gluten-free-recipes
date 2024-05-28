@@ -22,12 +22,13 @@
 /* Research */
 
 .research-section {
-  background-color: rgb(242, 242, 242);
   border: 2px 0px 0px 0px  solid black;
   text-align: center;
-  color: rgb(89, 71, 31);
+  color: var(--third-color);
   margin-bottom:2em;
-  padding:1em
+  padding:1em;
+  margin-top:1em;
+  padding-bottom:1em
 }
 .research-button {
   background-color: var(--first-color);
@@ -41,6 +42,7 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-evenly;
+
 }
 .choices-list-research {
   display: flex;
@@ -49,10 +51,15 @@
   align-items: start;
   flex-wrap: wrap;
 
+  padding:2em;
+  border-top:2px  black solid;
+
+
 }
 
 #choices-dish{
   height:150px;
+ 
 
 }
 

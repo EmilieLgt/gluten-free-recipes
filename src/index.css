@@ -6,7 +6,8 @@
   text-rendering: optimizeLegibility;
  --first-color :rgba(214, 161, 0, 0.87);  
  --secondary-color : rgb(97, 97, 153);
- --dark-color:  rgb(64, 46, 9);
+ --third-color : rgb(46, 52, 5);
+ --dark-color:  rgb(31, 21, 2);
  --light-color : rgb(253, 234, 209);
  --background-color:rgb(242, 242, 242)
 }
@@ -40,3 +41,4 @@ a {
   text-decoration: none;
   color:inherit
 }
+
