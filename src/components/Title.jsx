@@ -5,7 +5,7 @@ function Title() {
       <img className="logo-header" src="../gf-logo.svg"></img>
       <h1>Gluten-free recipes</h1></div>
       <div>
-        <p> Made with Edamam API</p>
+        <p className="made-with-title"> Made with Edamam API</p>
       </div>
     </div>
   );

@@ -1,5 +1,4 @@
 /* Header */
-
 .header {
   display: flex;
   flex-direction: column;
@@ -9,7 +8,7 @@
   background-color: var(--first-color);
 }
 .logo-header {
-  height: 7vh;
+  height: 10vh;
 }
 
 .logo-title-header {
@@ -20,29 +19,35 @@
 }
 
 /* Research */
-
+.research-section h2 {
+  margin-bottom: 0.5em;
+}
+.research-section h3 {
+  background-color: var(--green-color);
+  text-align: center;
+  color: white;
+  margin: 0;
+  padding: 0.5em;
+}
 .research-section {
-  border: 2px 0px 0px 0px  solid black;
   text-align: center;
   color: var(--third-color);
-  margin-bottom:2em;
-  padding:1em;
-  margin-top:1em;
-  padding-bottom:1em
+  margin-bottom: 2em;
+  padding: 1em;
+  margin-top: 1em;
+  padding-bottom: 1em;
 }
 .research-button {
   background-color: var(--first-color);
   color: #ffffff;
-  box-shadow: 2px 3px 3px var(--dark-color);
 }
 
-.filters-section{
-  display:flex;
+.filters-section {
+  display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-evenly;
-
 }
 .choices-list-research {
   display: flex;
@@ -50,66 +55,141 @@
   justify-content: center;
   align-items: start;
   flex-wrap: wrap;
-  padding:2em;
-  border-top:2px  black solid;
+  padding: 2em;
 }
 
-#choices-dish{
-  height:150px;
- 
-
+#choices-dish {
+  height: 150px;
 }
 
-#choices-dish label {  padding-left: 2em;}
+#choices-dish label {
+  padding-left: 2em;
+}
 
-
-
-.input-research{
-  padding:0.5em;
-  width:50%;
+.input-research {
+  padding: 0.5em;
+  width: 50%;
   background-color: rgb(255, 255, 255);
-  border-radius:1em;
+  border-radius: 1em;
 }
-
-.clear-button {
-  background-color: var(--secondary-color);
-  color:white;
-  margin-left:1em;
-  box-shadow: 2px 2px 3px black;
-}
-.add-button {
-  background-color: var(--first-color);
-  color:white;
-  margin-left:1em;
-  box-shadow: 2px 2px 3px black;
-}
-
 
 .list-ingredients-filter {
-list-style:none;
-display:flex ; 
-flex-direction: row;
-gap :1em;
-flex-wrap: wrap;
-max-width: 25vw;
-margin-top:0;
-margin-bottom:1em
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+  flex-wrap: wrap;
+  max-width: 25vw;
+  margin-top: 0;
+  margin-bottom: 1em;
 }
 
-.list-ingredients-filter li{
-  background-color: var(--third-color);
-  color:white;
-  padding:0.4em;
+.list-ingredients-filter li {
+  background-color: var(--first-color);
+  color: white;
+  padding: 0.4em;
   text-transform: uppercase;
-  font-size : 0.8em
+  font-size: 0.8em;
 }
 
 .ingredients-choice {
-  display:flex;
+  display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  padding:1.5em;
-  border-top:2px  black solid;
+  padding: 1.5em;
+}
+
+.clear-button {
+  background-color: var(--green-color);
+  color: white;
+  margin-left: 1em;
+}
+.add-button {
+  background-color: var(--green-color);
+  color: white;
+  margin-left: 1em;
+}
+
+@media screen and (max-width: 992px) {
+
+  .logo-header {
+    height: 7vh;
+  } 
+ 
+  .made-with-title {
+    font-size: 0.8em;
+  }
+
+  .choices-list-research {
+    display: flex;
+    padding: 0;
+    border-top: 0px;
+  }
+
+  #choices-dish {
+    height: fit-content;
+    margin-left: 20vw;
+  }
+
+  #choices-dish label {
+    padding-left: 0;
+  }
+  .research-section {
+    border: 0px;
+  }
+
+  .meal-diet-section h3 {
+    text-align: left;
+
+    width:90%;
+    padding:0.2em;
+    margin-top:1em;
+    margin-bottom:0.5em
+  }
+  .meal-section-research{
+    width: 95vw;
+  }
+.dish-section-research h3 {
+  text-align: left;
+  padding-top:0.2em;
+  padding-bottom:0.2em;
+  padding-right:0;
+  margin-top:1em;
+  margin-bottom:0.5em;
+
+
+}
+  .meal-diet-section input {
+    margin-left: 20vw;
+  }
+
+  .ingredients-choice {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0;
+    border-top: 0px;
+  }
+
+  .input-research {
+    padding: 0.5em;
+    width: 80%;
+    margin: 0;
+    background-color: rgb(255, 255, 255);
+    border-radius: 1em;
+  }
+
+  .clear-button {
+    margin-left: 0;
+    margin-bottom: 1em;
+  }
+  .add-button {
+    margin-left: 0;
+    margin-top:1em;
+    margin-bottom:1em
+  }
 }

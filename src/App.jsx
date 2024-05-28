@@ -39,10 +39,13 @@ function App() {
   // using states to update recipes according to user choices (meals, diets ...)
 
   const [selectedMeals, setSelectedMeals] = useState([]);
-
   const [selectedDiets, setSelectedDiets] = useState([]);
-
   const [selectedDishes, setSelectedDishes] = useState([]);
+
+  //using states to displya some choices categories 
+
+
+
 
   // using state to put a conditon on the display of message error
 
@@ -67,17 +70,19 @@ function App() {
 
   const handleRemoveIngredient = () => {
     setSelectedIngredients([]);
+    console.log(selectedIngredients)
   };
   return (
     <>
       <Title />
       <section className="research-section">
-        <h2>What are you looking for ?</h2>
+        <h2 >What are you looking for ?</h2>
+        <p>Pick at least one filter to start your research</p>
         <div className="filters-section">
           <div className="meal-diet-section">
             <div className="meal-section-research">
-              <h3>Meal </h3>
-              <div className="choices-list-research">
+              <h3 >Meal </h3>
+             <div className="choices-list-research">
                 <label>
                   {/* every input value represents what will be written in the api request when it's selected. if something is slected, it will be added to the selectedMeals array. 
           If something is unselected, selectedMeals will be filtered and become an array without the unselected meals */}
@@ -155,8 +160,8 @@ function App() {
               </div>
             </div>
             <div className="diet-section-research">
-              <h3>Diet</h3>
-              <div className="choices-list-research">
+               <h3 >Diet</h3>
+             <div className="choices-list-research">
                 <label>
                   <input
                     type="checkbox"
@@ -413,10 +418,11 @@ function App() {
                 Sweets
               </label>
             </div>
-            <div>
+            <div className="ingredients-section-research">
               <h3>Ingredient </h3>
-              It will display recipes with at least one of the ingredients
+ 
               <div className="ingredients-choice">
+              <p>You will get recipes with at least one of the ingredients</p>
                 <input
                   type="text"
                   className="input-research"
@@ -457,9 +463,9 @@ function App() {
             <Recipe key={recipe.recipe.uri} recipe={recipe.recipe} />
           ))
         ) : choicesMade ? (
-          <div>No results 😟 Try some other filters ! </div>
+          <div>No results 😟 Try with other filters ! </div>
         ) : (
-          <h3>Select some filters to get recipes </h3>
+          <h3> Select some filters to get recipes </h3>
         )}
       </section>
     </>

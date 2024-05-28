@@ -25,7 +25,7 @@
   border-radius: 20px;
 }
 .title-box-recipe {
-  background-color: var(--third-color);
+  background-color: var(--first-color);
   width: 100%;
 }
 
@@ -45,11 +45,7 @@
   border-radius: 1em 1em 0em 0em;
   width: 300px;
 }
-.button-recipe {
-  background-color: var(--first-color);
-  box-shadow: 1px 3px 3px rgb(133, 89, 18);
-  color: white;
-}
+
 .tags-recipe {
   color: var(--first-color);
   text-transform: uppercase;
@@ -89,11 +85,17 @@ border-radius: 1em 1em 0em 0em;
 }
 
 .tag-racipe {
-  background-color: var(--first-color);
+  background-color: var(--green-color);
   color:white;
   margin-top:1em;
   font-size:0.8em;
   padding-left:1em;
   padding-right:2em;
   border-radius: 0em 1em 1em 0em
+}
+
+.show-more-button{
+  background-color: rgb(202, 216, 182);
+  margin:auto;
+  box-shadow: none;
 }

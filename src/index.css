@@ -9,7 +9,8 @@
  --third-color : rgb(46, 52, 5);
  --dark-color:  rgb(31, 21, 2);
  --light-color : rgb(253, 234, 209);
- --background-color:rgb(242, 242, 242)
+ --background-color:rgb(242, 242, 242);
+ --green-color: rgb(170, 188, 101);
 }
 
 body {
@@ -19,8 +20,9 @@ body {
 }
 
 h1 {
-  font-size: 5em;
+  font-size: 6em;
   margin:0;
+  margin-left:0.5em;
   font-family: "Sue Ellen Francisco";
 }
 
@@ -35,10 +37,26 @@ button {
   font-family: inherit;
   cursor: pointer;
   transition: border-color 0.25s;
+  box-shadow: 3px 3px 0px rgb(101, 101, 23)
 }
+
+button:active {
+  box-shadow: 0px 0px 0px black;
+  transform: scale(0.9);
+  }
 
 a {
   text-decoration: none;
   color:inherit
 }
 
+
+@media  screen and (max-width:992px) {
+  h1 {
+    font-size: 2.5em;
+      margin:0
+  
+  }
+
+  h3 {text-align: center;}
+}
