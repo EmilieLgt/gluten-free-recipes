@@ -1,5 +1,5 @@
 /* eslint-disable react/jsx-key */
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Title from "./components/Title";
 import Recipe from "./components/Recipe";
 import "./App.css";
@@ -42,11 +42,6 @@ function App() {
   const [selectedDiets, setSelectedDiets] = useState([]);
   const [selectedDishes, setSelectedDishes] = useState([]);
 
-  //using states to displya some choices categories 
-
-
-
-
   // using state to put a conditon on the display of message error
 
   const [choicesMade, setChoicesMade] = useState(false);
@@ -61,17 +56,20 @@ function App() {
   };
 
   const handleAddIngredient = () => {
-    if (inputValue.trim() !== "") {
-      // Vérifie si l'input n'est pas vide
-      setSelectedIngredients([...selectedIngredients, inputValue]); // Ajoute la valeur de l'input à la liste
-      setInputValue(""); // Réinitialise l'input
+      setSelectedIngredients([...selectedIngredients, inputValue]); // add the value of input to the list
+      setInputValue(""); // set input to orginal state 
+      console.log(`ingredients après add function : ${selectedIngredients}`)
     }
-  };
+  ;
 
   const handleRemoveIngredient = () => {
     setSelectedIngredients([]);
-    console.log(selectedIngredients)
+    console.log(`ingredients après clear function  : ${selectedIngredients}`)
   };
+
+  useEffect(() => {
+    console.log("Ingredients après modification :", selectedIngredients);
+  }, [selectedIngredients]);
   return (
     <>
       <Title />
@@ -84,7 +82,7 @@ function App() {
               <h3 >Meal </h3>
              <div className="choices-list-research">
                 <label>
-                  {/* every input value represents what will be written in the api request when it's selected. if something is slected, it will be added to the selectedMeals array. 
+                  {/* every input value represents what will be written in the api request when it's selected. if something is selected, it will be added to the selectedMeals array. 
           If something is unselected, selectedMeals will be filtered and become an array without the unselected meals */}
                   <input
                     type="checkbox"
@@ -446,7 +444,7 @@ function App() {
                   className="clear-button"
                   onClick={handleRemoveIngredient}
                 >
-                  {" "}
+                  
                   ❌ Clear
                 </button>
               )}
